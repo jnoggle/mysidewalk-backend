@@ -1,0 +1,15 @@
+{
+  "name": "mysidewalk-backend",
+  "version": "1.0.0",
+  "description": "Interview problem set for MySidewalk Backend or Full-Stack Engineer",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "run": "node ./src/main.js ./assets/example-list.txt ./sorted-list.txt"
+  },
+  "author": "Justin Noggle",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "29.7.0"
+  }
+}
