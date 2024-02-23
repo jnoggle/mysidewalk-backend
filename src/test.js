@@ -63,7 +63,7 @@ describe("comparisonFunction", () => {
   });
 
   describe("with strings containing unicode characters", () => {
-    test("it should not throw an error", () => {
+    test("it should sort the unicode strings without throwing an error", () => {
       const input = ["🍎", "🍏", "🍊", "🍋"];
       const expected = ["🍊", "🍋", "🍎", "🍏"];
 
