@@ -7,7 +7,7 @@ function main() {
 
   const unsorted = fs.readFileSync(example_list_file_name, "utf-8").split("\n");
 
-  const sorted = unsorted.sort(util.comparisonFunction);
+  const sorted = unsorted.sort(util.compareNumeralPrefixedStrings);
 
   fs.writeFile(sorted_example_list_file_name, sorted.join("\n"), (err) => {
     if (err) {

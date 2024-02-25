@@ -43,13 +43,13 @@ describe("extractString", () => {
   });
 });
 
-describe("comparisonFunction", () => {
+describe("compareNumeralPrefixedStrings", () => {
   describe("with a single element array", () => {
     test("it should return the same array", () => {
       const input = ["abc"];
       const expected = ["abc"];
 
-      expect(input.sort(util.comparisonFunction)).toEqual(expected);
+      expect(input.sort(util.compareNumeralPrefixedStrings)).toEqual(expected);
     });
   });
 
@@ -58,7 +58,7 @@ describe("comparisonFunction", () => {
       const input = ["100000 xyz", "bcd", "123abc", "abc", "23 abc"];
       const expected = ["23 abc", "123abc", "100000 xyz", "abc", "bcd"];
 
-      expect(input.sort(util.comparisonFunction)).toEqual(expected);
+      expect(input.sort(util.compareNumeralPrefixedStrings)).toEqual(expected);
     });
   });
 
@@ -67,7 +67,7 @@ describe("comparisonFunction", () => {
       const input = ["🍎", "🍏", "🍊", "🍋"];
       const expected = ["🍊", "🍋", "🍎", "🍏"];
 
-      expect(input.sort(util.comparisonFunction)).toEqual(expected);
+      expect(input.sort(util.compareNumeralPrefixedStrings)).toEqual(expected);
     });
   });
 });

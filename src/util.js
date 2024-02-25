@@ -28,7 +28,7 @@ function extractString(string) {
   return string.substring(number_part[0].length).trim();
 }
 
-function comparisonFunction(a, b) {
+function compareNumeralPrefixedStrings(a, b) {
   // Extract the number from the string
   const a_number = extractNumber(a);
   const b_number = extractNumber(b);
@@ -59,4 +59,8 @@ function comparisonFunction(a, b) {
   return a_number - b_number;
 }
 
-module.exports = { extractNumber, extractString, comparisonFunction };
+module.exports = {
+  extractNumber,
+  extractString,
+  comparisonFunction: compareNumeralPrefixedStrings,
+};
