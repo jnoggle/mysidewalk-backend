@@ -62,5 +62,5 @@ function compareNumeralPrefixedStrings(a, b) {
 module.exports = {
   extractNumber,
   extractString,
-  comparisonFunction: compareNumeralPrefixedStrings,
+  compareNumeralPrefixedStrings,
 };
