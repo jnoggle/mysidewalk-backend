@@ -18,18 +18,20 @@ function extractString(string) {
     return null;
   }
 
-  // Use regex to extract the trailing string part of the string
-  // Return the whole string if no number is found
+  // Use regex to extract the potential number part of the string
   const number_part = string.match(/\d+/);
+
+  // Return the whole string if no number is found
   if (number_part === null) {
     return string.trim();
   }
 
+  // Return the substring indexed after the number part if a number is found
   return string.substring(number_part[0].length).trim();
 }
 
 function compareNumeralPrefixedStrings(a, b) {
-  // Extract the number from the string
+  // Extract the numbers from the strings
   const a_number = extractNumber(a);
   const b_number = extractNumber(b);
 
