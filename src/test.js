@@ -2,7 +2,7 @@ const util = require("./util");
 
 describe("extractNumber", () => {
   describe("with a prefixed number in the input string", () => {
-    test("should return the prefixed number", () => {
+    test("it should return the prefixed number", () => {
       expect(util.extractNumber("123")).toBe(123);
       expect(util.extractNumber("123abc")).toBe(123);
       expect(util.extractNumber("123 abc")).toBe(123);
@@ -10,10 +10,17 @@ describe("extractNumber", () => {
   });
 
   describe("when there is no number in the input string", () => {
-    test("should return null", () => {
+    test("it should return null", () => {
       expect(util.extractNumber("abc")).toBe(null);
       expect(util.extractNumber("")).toBe(null);
       expect(util.extractNumber(null)).toBe(null);
+    });
+  });
+
+  describe("when there is a number not at the beginning of a string", () => {
+    test("it should return null", () => {
+      expect(util.extractNumber("abc123def")).toBe(null);
+      expect(util.extractNumber("abc123")).toBe(null);
     });
   });
 });

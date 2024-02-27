@@ -5,7 +5,7 @@ function extractNumber(string) {
 
   // Use regex to extract the leading number part of the string
   // Return null if no number is found
-  const number_part = string.match(/\d+/);
+  const number_part = string.match(/^\d+/);
   if (number_part === null) {
     return null;
   }
