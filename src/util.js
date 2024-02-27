@@ -13,7 +13,7 @@ function extractNumber(string) {
   return Number(number_part[0]);
 }
 
-function extractString(string) {
+function extractCharString(string) {
   if (string === null) {
     return null;
   }
@@ -51,8 +51,8 @@ function compareNumeralPrefixedStrings(a, b) {
 
   // If both strings are prefixed with the same number, compare the strings
   if (a_number === b_number) {
-    const a_string = extractString(a);
-    const b_string = extractString(b);
+    const a_string = extractCharString(a);
+    const b_string = extractCharString(b);
 
     return a_string.localeCompare(b_string);
   }
@@ -63,6 +63,6 @@ function compareNumeralPrefixedStrings(a, b) {
 
 module.exports = {
   extractNumber,
-  extractString,
+  extractCharString,
   compareNumeralPrefixedStrings,
 };

@@ -25,27 +25,27 @@ describe("extractNumber", () => {
   });
 });
 
-describe("extractString", () => {
+describe("extractCharString", () => {
   describe("when there is no number in the input string", () => {
     test("should return the whole string", () => {
-      expect(util.extractString("abc")).toBe("abc");
+      expect(util.extractCharString("abc")).toBe("abc");
     });
   });
 
   describe("when there is a number prefixed in the input string", () => {
-    expect(util.extractString("123abc")).toBe("abc");
-    expect(util.extractString("123 abc")).toBe("abc");
+    expect(util.extractCharString("123abc")).toBe("abc");
+    expect(util.extractCharString("123 abc")).toBe("abc");
   });
 
   describe("when there is no text in the input string", () => {
     test("it should return the empty string", () => {
-      expect(util.extractString("123")).toBe("");
+      expect(util.extractCharString("123")).toBe("");
     });
   });
 
   describe("when the input string is null", () => {
     test("it should return null", () => {
-      expect(util.extractString(null)).toBe(null);
+      expect(util.extractCharString(null)).toBe(null);
     });
   });
 });
