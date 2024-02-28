@@ -6,8 +6,8 @@ Note: This project requires node and npm to be installed. Node v20.9.0 was used 
 
 ## To Test
 
-`npm run-script test`
+`npm run test`
 
 ## To Run
 
-`npm run-script run`
+`npm run start`
