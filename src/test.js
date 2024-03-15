@@ -33,8 +33,10 @@ describe("extractCharString", () => {
   });
 
   describe("when there is a number prefixed in the input string", () => {
-    expect(util.extractCharString("123abc")).toBe("abc");
-    expect(util.extractCharString("123 abc")).toBe("abc");
+    test("it should return the substring following the number", () => {
+      expect(util.extractCharString("123abc")).toBe("abc");
+      expect(util.extractCharString("123 abc")).toBe("abc");
+    });
   });
 
   describe("when there is no text in the input string", () => {
